@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Train Station</title>
+    <link href = "css/style.css" rel='stylesheet'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
+    <script src='http://underscorejs.org/underscore-min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js">
+    </script>
+  </head>
+  <body>
+    <div class = "tinfo">
+      <form action="#" class="form-inline">
+        <div class="form-group">
+          <label class="sr-only">Train Number</label>
+          <div class="input-group">
+            <div class="input-group-addon">Train No: </div>
+            <input type="text" class="form-control" id="train" placeholder="eg 13049">
+          </div>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class = "container">
+      <table class="table table-bordered stninf">
+        <tr>
+          <th>Sr No</th>
+          <th>Station Name</th>
+        </tr>
+      </table>
+    </div>
+    <script type='text/javascript' src='js/index.js'></script>
+  </body>
+</html>

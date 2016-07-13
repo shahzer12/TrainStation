@@ -1,0 +1,78 @@
+
+var map;
+
+function initMap() {
+
+
+         map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: {lat: 0, lng: -180},
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+          //mapmarking();
+
+        });
+
+          // if(t==1){
+
+          // }
+
+
+
+      }
+
+    function mapmarking(obj) {
+
+var flightPlanCoordinates = obj;
+// [
+//           {lat: 26.8308, lng: 80.9233},
+//           {lat: 22.5834, lng: 88.3429},
+//            {lat: 12.9716, lng: 77.5946}
+//           // {lat: -27.467, lng: 153.027}
+//         ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+
+      }
+
+      function codeAddress(address) {
+    var geocoder = new google.maps.Geocoder();
+
+   // var address = document.getElementById("address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+         var latitude = results[0].geometry.location;
+      //  var longitude = results[0].geometry.location;
+        alert(latitude);
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+
+
+      function suc(response) {
+        console.log("I am in response");
+        console.log(response.obj);
+        codeAddress('bengaluru city railway station');
+        // for(var i=0; i<response.obj.length; i++) {
+        //   codeAddress(response.obj[i]);
+        // }
+       // codeAddress('Bengaluru City Railway Station');
+      // initMap(1);
+      }
+
+  //     // $(document).ready(function () {
+  // 'use strict';
+
+      function fail(err){
+        console.log(err);
+      }
+
+// });
